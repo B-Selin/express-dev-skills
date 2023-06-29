@@ -7,3 +7,16 @@ const skills = [
   { id: 678901, skill: 'Extreme Sock Matching', description: 'Has an uncanny ability to find and pair matching socks, even in the most chaotic laundry piles.' },
 ];
 
+module.exports = {
+  getAll,
+  getOne
+};
+
+function getAll() {
+  return skills;
+}
+
+function getOne(id) {
+  id = parseInt(id);
+  return skills.find(skill => skill.id === id);
+}
