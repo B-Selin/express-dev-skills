@@ -9,8 +9,11 @@ const skills = [
 
 module.exports = {
   getAll,
-  getOne
+  getOne,
+  create,
 };
+function create(){
+  }
 
 function getAll() {
   return skills;
