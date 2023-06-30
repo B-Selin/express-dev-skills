@@ -12,7 +12,9 @@ module.exports = {
   getOne,
   create,
 };
-function create(){
+function create(newSkillet){
+    newSkillet.id = Date.now() % 1000000;
+    skills.push(newSkillet);
   }
 
 function getAll() {
