@@ -11,9 +11,13 @@
     <% skills.forEach(function(t) { %>
       <li>
         <a href="/skills/<%= t.id %>"><%= t.skill %></a>
-
+        
       </li>
     <% }); %>
   </ul>
+  <!--Display an Add Skill link on the index view that when clicked, displays a new view that includes a form for entering a new Dev Skill.  -->
+  <a href="/skills/new">Add New Skill</a>
+  <!-- we will add an a href with the link of the views/skills/new.js, and than will go to the page, IT should return an error before we create the view/skills/view -->
 </body>
 </html>
+

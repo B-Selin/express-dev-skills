@@ -3,8 +3,14 @@ const Skill = require('../models/skill');
 
 module.exports = {
   index,
-  show
+  show,
+  new: newSkill,
 };
+
+// adding new skill, data is collected from the from element in the new.ejs page
+function newSkill(req, res) {
+  res.render('skills/new', { title: 'New Skill' });
+}
 
 function index(req, res) {
   res.render('skills/index', {
@@ -17,3 +23,4 @@ function show(req, res) {
     skill: Skill.getOne(req.params.id),
   })
 }
+
