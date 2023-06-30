@@ -30,6 +30,6 @@ router.post('/', skillsCtrl.create);
 
 //now we want to Delete something with a specific id
 
-router.delete('/id', skillsCtrl.delete)
+router.delete('/:id', skillsCtrl.delete)
 
 // now we have to create a delete function in controllers and also in the models because we want to update the skills array too

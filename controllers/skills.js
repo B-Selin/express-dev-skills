@@ -11,6 +11,7 @@ module.exports = {
 
 function deleteSkill(req, res){
   Skill.deleteOne(req.params.id); //we have to define a deleteOne function in the models.req.params.id is how we choosing the skill we are deleting. We will probably have to a skill.id === id in models.
+  res.redirect('/skills');
 }
 
 function create (req, res){

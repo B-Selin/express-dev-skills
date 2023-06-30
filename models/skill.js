@@ -11,7 +11,18 @@ module.exports = {
   getAll,
   getOne,
   create,
+  deleteOne,
 };
+
+function deleteOne(id){
+  id = parseInt(id);
+  //in here we will create a constant called idx. we will loop through the skills set via findIndex, to return the item with the chosen id, and splice the skills array.
+
+  // do I want to return the index or the actual object?
+  
+  const idx = skills.findIndex(skill => skill.id === id);
+  skills.splice(idx, 1);
+}
 function create(newSkillet){
     newSkillet.id = Date.now() % 1000000;
     skills.push(newSkillet);

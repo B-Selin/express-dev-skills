@@ -3,10 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>LOVELACE SKILLS</title>
 </head>
 <body>
   <h2><%= skill.skill %></h2>
   <p><%= skill.description %></p>
+  <!-- wee need to have a delete button here -->
+  <!-- we will use the method override to delete it, we will act like it is post, but actually it will be delete. -->
+  <!-- I copied this from index page cause at first I did not read the instructions, but it is suppose to be on the show page -->
+
+  <!-- but remember there is no function(s) defined here, so we need skill.id instead of s.id -->
+  <form action="/skills/<%=skill.id %>?_method=DELETE" method="POST" class="delete-form">
+    <button type="submit">delete</button>
+  </form>
 </body>
 </html>
